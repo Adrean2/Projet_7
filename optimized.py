@@ -14,7 +14,7 @@ class Action:
         self.ratio_prix_benefice = self.market_value/self.benefice
 
 
-def calculate_profit(liste_actions):
+def find_best_one(liste_actions):
 
     liste_actions = sorted(liste_actions,key = lambda action : action.ratio_prix_benefice)
     capital = int(sys.argv[2])
@@ -44,8 +44,8 @@ def main():
             else: liste_actions.append(Action(name,price,profit))
                         
 
-    most_profitable_actions = calculate_profit(liste_actions)
-    
+    most_profitable_actions = find_best_one(liste_actions)
+
     # Données utiles
     print("Bénéfice réalisé : ",sum([action.benefice for action in most_profitable_actions]))
     print("Coût total: ",sum([action.price for action in most_profitable_actions]))
