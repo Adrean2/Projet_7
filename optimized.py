@@ -45,11 +45,17 @@ def main():
                         
 
     most_profitable_actions = calculate_profit(liste_actions)
-    print(f"Coût total:  {sum([action.price for action in most_profitable_actions])}\nBénéfice réalisé : {sum([action.benefice for action in most_profitable_actions])}\nCapital final :  {sum([action.benefice for action in most_profitable_actions]) + int(sys.argv[2])}")
+    
+    # Données utiles
+    print("Bénéfice réalisé : ",sum([action.benefice for action in most_profitable_actions]))
+    print("Coût total: ",sum([action.price for action in most_profitable_actions]))
+    print("Capital final : ", sum([action.benefice for action in most_profitable_actions]) + int(sys.argv[2]))
     print([action.name for action in most_profitable_actions])
+
     stop = timeit.default_timer()
     print("time: ",stop - start)
 
 
 if __name__ == "__main__":
     main()
+

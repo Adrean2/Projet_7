@@ -31,6 +31,7 @@ def find_best_one(liste_actions):
 
     return most_profitable_liste
 
+
 def main():
 
     liste_actions = []
@@ -46,13 +47,13 @@ def main():
                 pass
             else: liste_actions.append(Action(name,price,profit))
 
-    best_one = find_best_one(liste_actions)
+    most_profitable_actions = find_best_one(liste_actions)
 
-    # Résultat final
-    print("Bénéfice réalisé : ",sum([action.benefice for action in best_one]))
-    print("Coût total: ",sum([action.price for action in best_one]))
-    print("Capital final : ", sum([action.benefice for action in best_one]) + int(sys.argv[2]))
-    print([action.name for action in best_one])
+    # Données utiles
+    print("Bénéfice réalisé : ",sum([action.benefice for action in most_profitable_actions]))
+    print("Coût total: ",sum([action.price for action in most_profitable_actions]))
+    print("Capital final : ", sum([action.benefice for action in most_profitable_actions]) + int(sys.argv[2]))
+    print([action.name for action in most_profitable_actions])
 
     stop = timeit.default_timer()
     print("time: ",stop - start)
