@@ -12,14 +12,11 @@ L'utilisation de ces algorithmes comprend 2 arguments : le fichier.csv à lire e
 
 ## Données retournée
 Les algorithmes retournent plusieurs données :
-<ul>
-  <li>Le coût total, qui correspond à la somme des prix des actions achetées</li>
-  <li>Le bénéfice, qui correspond à la somme des bénéfices des actions achetées</li>
-  <li>Le capital final, qui correspond à l'argent que vous détenez ! </li>
-  <li>Le noms des actions achetées</li>
-  <li>Le temps nécessaire à l'ordinateur pour exécuter l'algorithme</li>
-</ul>
-
+- Le coût total, qui correspond à la somme des prix des actions achetées
+- Le bénéfice, qui correspond à la somme des bénéfices des actions achetées
+- Le capital final, qui correspond à l'argent que vous détenez ! 
+- Le noms des actions achetées
+- Le temps nécessaire à l'ordinateur pour exécuter l'algorithme
 
 
 ## Requirements
